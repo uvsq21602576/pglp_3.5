@@ -11,9 +11,9 @@ public class UneClasseMetier {
 	}
 	
 	public void uneMethodeMetier () {
-		logger.info("Debut_uneMethodeMetier");
+		logger.info("Debut de uneMethodeMetier");
 		//traitement
-		logger.info("Fin_uneMethodeMetier");
+		logger.info("Fin de uneMethodeMetier");
 	}
 
 }
