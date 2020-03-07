@@ -7,8 +7,14 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		UneClasseMetier m = new UneClasseMetier();
+		UneClasseMetierLogger m = new UneClasseMetierLogger();
 		m.uneMethodeMetier();
+		
+		UneClasseMetierInterface I = new UneClasseMetierInterface(new AffichageFichier());
+		I.uneMethodeMetier();
+		
+		I = new UneClasseMetierInterface(new AffichageSysteme());
+		I.uneMethodeMetier();
 	}
 	
 }

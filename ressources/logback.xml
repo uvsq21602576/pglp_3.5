@@ -11,10 +11,9 @@
         <file>tests.txt</file>
         <append>true</append>
         <encoder>
-            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
-
 
 	<logger name="fr.uvsq.uvsq21602576" level="TRACE" >
 		<appender-ref ref="STDOUT" />
