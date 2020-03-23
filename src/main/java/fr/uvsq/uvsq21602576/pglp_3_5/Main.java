@@ -1,20 +1,34 @@
 package fr.uvsq.uvsq21602576.pglp_3_5;
 
-public class Main {
+/**
+ * Classe contenant le main du programme.
+ * @author Flora
+ */
+public enum Main {
+    /**
+     * Singleton main.
+     */
+    MAIN;
 
-	public Main() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public static void main(String[] args) {
-		UneClasseMetierLogger m = new UneClasseMetierLogger();
-		m.uneMethodeMetier();
-		
-		UneClasseMetierInterface I = new UneClasseMetierInterface(new AffichageFichier());
-		I.uneMethodeMetier();
-		
-		I = new UneClasseMetierInterface(new AffichageSysteme());
-		I.uneMethodeMetier();
-	}
-	
+    /**
+     * Méthode contenant le corps du main.
+     */
+    public void run() {
+        UneClasseMetierLogger m = new UneClasseMetierLogger();
+        m.uneMethodeMetier();
+
+        UneClasseMetierInterface i;
+        i = new UneClasseMetierInterface(new AffichageFichier("text.log"));
+        i.uneMethodeMetier();
+
+        i = new UneClasseMetierInterface(new AffichageSysteme());
+        i.uneMethodeMetier();
+    }
+
+    /**
+     * Méthode main.
+     */
+    public static void main() {
+        MAIN.run();
+    }
 }

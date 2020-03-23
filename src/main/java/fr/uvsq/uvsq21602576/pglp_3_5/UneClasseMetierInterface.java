@@ -1,19 +1,34 @@
 package fr.uvsq.uvsq21602576.pglp_3_5;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+/**
+ * Classe métier.
+ * Avec affichage grâce à Interface personnelle
+ * @author Flora
+ */
 public class UneClasseMetierInterface {
-	private Affichage A;
+    /**
+     * Interface affichage.
+     */
+    private final Affichage affichage;
 
-	public UneClasseMetierInterface(Affichage A) {
-		this.A = A;
-	}
-	
-	public void uneMethodeMetier () {
-		A.print("Debut de uneMethodeMetier");
-		//traitement
-		A.print("Fin de uneMethodeMetier");
-	}
+    /**
+     * Constructeur.
+     * Crée une classe métier,
+     * qui utilisera l'affichage en paramêtre.
+     * @param a    affichage
+     */
+    public UneClasseMetierInterface(final Affichage a) {
+        this.affichage = a;
+    }
+
+    /**
+     * Une méthode métier.
+     * Le début et la fin sont afficher.
+     */
+    public void uneMethodeMetier() {
+        affichage.print("Debut de uneMethodeMetier");
+        //traitement
+        affichage.print("Fin de uneMethodeMetier");
+    }
 
 }
