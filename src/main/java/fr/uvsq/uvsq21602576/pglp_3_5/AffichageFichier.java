@@ -1,5 +1,6 @@
 package fr.uvsq.uvsq21602576.pglp_3_5;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -31,10 +32,11 @@ public class AffichageFichier implements Affichage {
      * @param   message Message à écrire
      */
     public void print(final String message) {
-        try (FileWriter file = new FileWriter(this.fichier, true)) {
+        try (BufferedWriter buff = new BufferedWriter(
+                new FileWriter(this.fichier, true))) {
             String date = LocalDateTime.now().toString();
-            file.write(date + " - " + message + "\n");
-            file.close();
+            buff.write(date + " - " + message + "\n");
+            buff.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
