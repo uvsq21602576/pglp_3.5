@@ -27,8 +27,9 @@ public enum Main {
 
     /**
      * Méthode main.
+     * @param args arguments
      */
-    public static void main() {
+    public static void main(String args[]) {
         MAIN.run();
     }
 }
